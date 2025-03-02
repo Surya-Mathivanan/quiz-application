@@ -26,7 +26,7 @@ This is a web-based Quiz Application designed for the Udhayam Department Event a
 ## Installation & Usage
 ### 1. Clone or Download the Repository
 ```
-git clone https://github.com/your-repo-url.git
+git clone https://github.com/Surya-Mathivanan/quiz-application.git
 cd quiz-application
 ```
 ### 2. Open in Browser
