@@ -1,8 +1,16 @@
 # Quiz Application
 This is a web-based Quiz Application designed for the Udhayam Department Event at our college. The application allows users to take a quiz, tracks their scores, and maintains a leaderboard.
 
+## see online
+ - Website : https://udhayam25-technicalquiz.netlify.app/
+
 ## College Posters
 ### 1. department poster
+![Image](https://github.com/user-attachments/assets/1bbce667-a473-4a3f-8324-2abc454dfed0)
+### 2. Qr Code 
+![Image](https://github.com/user-attachments/assets/b1a00a75-5e5b-4b14-a35a-693cd1fc30aa)
+### Registration Poster
+![Image](https://github.com/user-attachments/assets/82d32778-82d3-430b-836e-d555241b541b)
 
 
 ## Features
