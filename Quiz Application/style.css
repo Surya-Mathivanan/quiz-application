@@ -1,0 +1,1329 @@
+* {
+  user-select: none;
+}
+
+#title1 h1 {
+
+    font-family: 'Rigretth', sans-serif;
+    font-size: 50px;
+    background: linear-gradient(to right, yellowgreen, #ff7e5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: -60px;
+    
+  
+}
+#title3 h3 {
+  font-family: 'Rigretth', sans-serif;
+  font-size: 2rem;
+  background: linear-gradient(to right, yellowgreen, #ff7e5f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-align: center;
+  margin: 10px 0;
+  margin-bottom: -60px;
+}
+
+#title2 h3 {
+  font-family: 'Rigretth', sans-serif;
+  font-size: 2rem;
+  background: linear-gradient(to right, yellowgreen, #ff7e5f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-align: center;
+  margin: 10px 0;
+  margin-bottom: -60px;
+}
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  top: 175px;
+  right: 40px;
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  opacity: 0; /* Initially hidden */
+  transition: transform 0.3s ease-in-out;
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+
+.wrapper .icon:hover img {
+  opacity: 1;
+}
+
+/* Keep the background white when not hovering */
+.wrapper .icon:not(:hover) {
+  background: #fff;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Colors for each icon */
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #d4a405;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #16df04;
+  color: #fff;
+}
+
+.wrapper .instagram1:hover,
+.wrapper .instagram1:hover .tooltip,
+.wrapper .instagram1:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+#designer {
+  position: absolute; /* Change to fixed if you want it to stay on screen */
+  bottom: 7px; /* Adjust as needed */
+  left: 660px; /* Adjust as needed */
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  color: #ce9806;
+}
+
+
+
+
+
+#oggie {
+  width: 150px; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+body {
+  font-family: 'Times New Roman', Times, serif;
+  background-image: url(assets/3.avif);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative; 
+}
+
+/* =================================================================================================== */
+
+/* Centered Logo */
+.logo {
+  position: absolute;
+  top: 1%; /* Adjust position as needed */
+  left: 49%;
+  transform: translateX(-50%);
+  width: 350px; /* Adjust size as needed */
+  height: auto;
+  /* Ensure it's above other elements */
+}
+.page:not(#home-page) .logo {
+  display: none;
+}
+
+
+#app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Pages */
+.page {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Show Active Page */
+.page.active {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* Button Styling */
+
+
+
+  
+  .hidden {
+    display: none;
+  }
+  
+
+#home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  /* background:linear-gradient(135deg, #d48206, #2575fc); */
+  background-image: url(assets/3.avif);
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+  visibility: visible; /* Ensure it's not hidden */
+  opacity: 1; /* Keep it fully visible */
+}
+
+
+/* Hide other pages initially */
+.page.hidden {
+  display: none !important;
+}
+
+/* Styling for the title */
+
+
+/* Button styling */
+#start-btn {
+  background: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  top: 40px;
+}
+
+#start-btn::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: conic-gradient(from 0deg, 
+    red, orange, yellow, green, blue, indigo, violet, red);
+  border-radius: 50px;
+  z-index: -1;
+  animation: rainbow 5s linear infinite;
+  filter: blur(15px);
+}
+
+@keyframes rainbow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ======================================================================================================== */
+  /* User Login Page */
+  #user-page h1 {
+    font-family: 'Rigretth', sans-serif;
+    font-size: 3rem;
+    background: linear-gradient(to right, yellowgreen, #ff7e5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  #user-page input {
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+    background: transparent;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color 0.3s ease;
+    margin-top: 0px;
+    
+  }
+  
+  #user-page input::placeholder {
+    color: #ccc;
+  }
+  
+  #user-page input:focus {
+    border-color: #ff6f61;
+    outline: none;
+  }
+  
+  #login-btn {
+    background: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.8s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  #login-btn::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: conic-gradient(from 0deg, 
+      red, orange, yellow, green, blue, indigo, violet, red);
+    border-radius: 50px;
+    z-index: -1;
+    animation: rainbow 5s linear infinite;
+    filter: blur(15px);
+  }
+  
+  @keyframes rainbow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+  /* ==================================================================================================== */
+  /* Quiz Page */
+  #quiz-page h1 {
+    
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  #question-container {
+    background: transparent;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    justify-content:center;
+  }
+  
+  #question {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  #options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #options button {
+    margin: 10px;
+    padding: 10px 20px;
+    width: 200px;
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+/* Styling for radio buttons */
+#quiz-form label {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spacing between radio and text */
+  font-size: 18px;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+
+#quiz-form input[type="radio"] {
+  transform: scale(1.3); 
+  cursor: pointer;
+}
+
+
+#options button:hover {
+    background: #ff3b2f;
+    transform: scale(1.05);
+}
+
+.option-label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 400px;
+  cursor: pointer;
+  margin: 5px 0;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.option-label:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.option-label input {
+  margin-right: 10px;
+  accent-color: #ff6f61; 
+}
+#options {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+  
+#next-btn {
+  background: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#next-btn::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: conic-gradient(from 0deg, 
+    red, orange, yellow, green, blue, indigo, violet, red);
+  border-radius: 50px;
+  z-index: -1;
+  animation: rainbow 5s linear infinite;
+  filter: blur(15px);
+}
+
+@keyframes rainbow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Base button styles */
+#scoreboard-page button {
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin: 10px;
+}
+
+#scoreboard-page button::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: conic-gradient(from 0deg, 
+    red, orange, yellow, green, blue, indigo, violet, red);
+  border-radius: 10px;
+  z-index: -1;
+  animation: rainbow 5s linear infinite;
+  filter: blur(10px);
+}
+
+#scoreboard-page button:hover {
+  background: #ff3b2f;
+  transform: scale(1.1);
+}
+
+@keyframes rainbow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#scoreboard-page h1 {
+  font-family: 'Rigretth', sans-serif;
+  font-size: 3rem;
+  background: linear-gradient(to right, yellowgreen, #ff7e5f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+/* =================================================================================================================== */
+  
+  /* Leaderboard Page */
+  #leaderboard-page h1 {
+    font-family: 'Rigretth', sans-serif;
+    font-size: 3rem;
+    background: linear-gradient(to right, yellowgreen, #ff7e5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+  
+  #leaderboard {
+    width: 80%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #leaderboard th, #leaderboard td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  #leaderboard th {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  
+  #restart-btn {
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  #restart-btn:hover {
+    background: #ff3b2f;
+    transform: scale(1.1);
+  }
+  
+ 
+
+  /* Leaderboard Page */
+  .button-container button {
+    background: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 10px;
+  }
+  
+  .button-container button::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: conic-gradient(from 0deg, 
+      red, orange, yellow, green, blue, indigo, violet, red);
+    border-radius: 50px;
+    z-index: -1;
+    animation: rainbow 5s linear infinite;
+    filter: blur(15px);
+  }
+  
+  @keyframes rainbow {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* Ensure the quiz page is scrollable */
+#quiz-page {
+  max-height: 100vh;
+  overflow-y: auto; 
+  padding-bottom: 20px;
+}
+
+/* Ensure images resize properly */
+#options img {
+  max-width: 100%; 
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Add a fixed height for better control */
+.question-container {
+  max-height: 70vh;
+  overflow-y: auto; 
+}
+/* ===============================================================================================================================
+================================================================================================================================== */
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 1.5rem;
+  }
+
+  button {
+      font-size: 1rem;
+      padding: 12px 25px;
+  }
+
+
+
+  #title1 h1 {
+    position: relative; 
+    top: 40px; 
+    left: 50%; 
+    transform: translateX(-50%);
+  
+    font-family: 'Rigretth', sans-serif;
+    font-size: 7rem;
+    background: linear-gradient(to right, yellowgreen, #ff7e5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+#title3 h3 {
+  position: relative; 
+  top: 30px;
+  left: 50%; 
+  transform: translateX(-50%); 
+
+  font-family: 'Rigretth', sans-serif;
+  font-size: 1rem;
+  background: linear-gradient(to right, yellowgreen, #ff7e5f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-align: center;
+  margin: 10px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+#title2 h3 {
+  position: relative; 
+  top: 30px;
+  left: 50%; 
+  transform: translateX(-50%);
+  
+  font-family: 'Rigretth', sans-serif;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, yellowgreen, #ff7e5f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+
+
+  #leaderboard {
+    width: 80%;
+    max-width: 80px;
+    background: rgba(224, 12, 12, 0.1);
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+/* ======================================================================= */
+#home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  width: 100vw;
+  text-align: center;
+  background-image: url(assets/3.avif);
+  background-size: cover; 
+  background-position: center;
+  color: white;
+  animation: fadeIn 1s ease-in-out;
+  visibility: visible;
+  opacity: 1;
+  margin: 0; 
+  padding: 0; 
+  overflow: hidden; 
+}
+  .wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    top: 220px;
+    right: 50px;
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 0; 
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  
+  .wrapper .icon:hover img {
+    opacity: 1;
+}
+
+/* Keep the background white when not hovering */
+.wrapper .icon:not(:hover) {
+    background: #fff;
+}
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Colors for each icon */
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #4c8bdd;
+    color: #fff;
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #d60349;
+    color: #fff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e7d003;
+    color: #fff;
+  }
+
+  .wrapper .instagram1:hover,
+  .wrapper .instagram1:hover .tooltip,
+  .wrapper .instagram1:hover .tooltip::before {
+    background: #11be01;
+    color: #fff;
+  }
+  #designer {
+    position: absolute; 
+    bottom: 30px; 
+    left:136px;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    color: #333333;
+}
+  
+  .btn:hover .btn-text-one {
+    top: -100%;
+  }
+  
+  .btn:hover .btn-text-two {
+    top: 50%;
+  }
+  
+  /* Hide other pages initially */
+  .page.hidden {
+    display: none !important;
+  }
+  
+
+
+  /* Button styling */
+  #start-btn {
+    top: 60px;
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  #start-btn:hover {
+    background: #ff3b2f;
+    transform: scale(1.1);
+  }
+/* ================================================================== */
+/* User Login Page */
+  #login-btn {
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+/* ==================================================================== */
+    #next-btn {
+      background: #ff6f61;
+      margin-top: 10px;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+/* ===================================================================== */
+
+
+  #scoreboard-page {
+    /* Match the background with other pages */
+    color: white;
+    
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  #scoreboard-page.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #scoreboard-page h1 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-in-out;
+    margin-top: 100px;
+  }
+
+  #scoreboard-page p {
+    font-size: 10px;
+    margin-bottom: 20px;
+
+  }
+
+  #scoreboard-page #user-score {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fafafa; 
+  }
+
+/* Base button styles */
+#scoreboard-page button {
+  background: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  margin: 10px;
+}
+
+#scoreboard-page button::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: conic-gradient(from 0deg, 
+    red, orange, yellow, green, blue, indigo, violet, red);
+  border-radius: 10px;
+  z-index: -1;
+  animation: rainbow 5s linear infinite;
+  filter: blur(10px);
+}
+
+#scoreboard-page button:hover {
+  background: #ff3b2f;
+  transform: scale(1.1);
+}
+
+@keyframes rainbow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+  /* Centered Logo */
+  .logo {
+    position: absolute;
+    top: 23%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    height: auto;
+  }
+  .page:not(#home-page) .logo {
+    display: none;
+  }
+  .page:not(#home-page) .logoo {
+    display: none;
+  }
+  .logoo {
+    position: absolute;
+    top: 34%;
+    left: 46%;
+    transform: translate(-50%, -50%) rotate(23deg); 
+    width: 30%;  
+    height: auto;
+  }
+
+  /* ============================================================== */
+
+
+  /* Leaderboard Page */
+  #leaderboard-page h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  #leaderboard {
+    width: 80%;
+    max-width: 10%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  #leaderboard th, #leaderboard td {
+    padding: 1px;
+    text-align: center;
+  }
+  
+  #leaderboard th {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+  }
+  
+  #restart-btn {
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  #restart-btn:hover {
+    background: #ff3b2f;
+    transform: scale(1.1);
+  }
+  
+ 
+
+  /* Leaderboard Page */
+  #leaderboard-page .button-container {
+      display: flex;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    
+    #refresh-leaderboard-btn, #delete-data-btn {
+      background: #ff6f61;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    
+    #refresh-leaderboard-btn:hover, #delete-data-btn:hover {
+      background:#ff6f61;
+      transform: scale(1.1);
+    }
+    #scoreboard-page h1 {
+      font-family: 'Rigretth', sans-serif;
+      font-size: 3rem;
+      background: linear-gradient(to right, yellowgreen, #ff7e5f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+    /* Ensure the quiz page is scrollable */
+  #quiz-page {
+    max-height: 100vh;
+    overflow-y: auto;  
+    padding-bottom: 20px;
+  }
+
+  /* Ensure images resize properly */
+  #options img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 10px auto;
+  }
+
+  /* Add a fixed height for better control */
+  .question-container {
+    max-height: 70vh; 
+    overflow-y: auto;
+  }
+  /* Button Container */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; 
+}
+
+/* Button Styling */
+.button-container button {
+  background: #ff6f61; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px; /* Rounded corners */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Button */
+.button-container button:hover {
+  background: #ff3b2f;
+  transform: scale(1.05); 
+}
+}
+
+ /* Animations */
+ @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #home-page h1 {
+    font-size: 2.5rem;
+  }
+
+  #start-btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+
+/* Mobile Responsiveness for 360x740 Screens */
+@media (max-width: 768px) {
+  /* General Adjustments */
+  body {
+    overflow: auto; 
+  }
+
+  h1 {
+    font-size: 2rem; 
+  }
+
+  button {
+    padding: 10px 20px; 
+    font-size: 1rem; 
+  }
+
+  /* Home Page Adjustments */
+  #home-page h1 {
+    font-size: 2rem; /* Smaller title */
+  }
+
+  #start-btn {
+    padding: 10px 20px; /* Smaller button */
+    font-size: 1rem;
+  }
+
+  /* User Login Page Adjustments */
+  #user-page h1 {
+    font-size: 1.8rem; /* Smaller title */
+    margin-top: 200px; /* Adjusted margin */
+  }
+
+  #user-page input {
+    width: 80%; /* Full width for inputs */
+    max-width: 250px; /* Limit input width */
+  }
+
+  /* Quiz Page Adjustments */
+  #quiz-page h1 {
+    font-size: 2rem; /* Smaller title */
+  }
+
+  #question-container {
+    width: 90%; /* Full width for question container */
+    padding: 15px; /* Smaller padding */
+  }
+
+  #question {
+    font-size: 1.2rem; /* Smaller question text */
+  }
+
+  #options button {
+    width: 90%; /* Full width for buttons */
+    padding: 10px; /* Smaller padding */
+  }
+
+  /* Leaderboard Page Adjustments */
+  #leaderboard-page h1 {
+    font-size: 2rem; /* Smaller title */
+  }
+
+  #leaderboard {
+    width: 90%; /* Full width for leaderboard */
+    padding: 15px; /* Smaller padding */
+  }
+
+  #leaderboard th, #leaderboard td {
+    padding: 8px; /* Smaller padding for table cells */
+  }
+}
+

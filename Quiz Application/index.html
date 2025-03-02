@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Udhayam`25</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://static.wixstatic.com/media/bdf66e_0e728635f25f402d919040c42028f837%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/bdf66e_0e728635f25f402d919040c42028f837%7Emv2.png" type="image/png">
+</head>
+<body>
+  <img src="assets/logo.png" alt="Quiz App Logo" class="logo">
+  
+  <div id="app">
+    <!-- Home Page -->
+    <div id="home-page" class="page">
+      <img src="assets/logo.png" alt="Quiz App Logo" class="logo">
+      
+      <div id="title1">
+        <h1>Technical Quiz!</h1>
+      </div>
+      <div id="title2">
+        <h3>Organized by</h3>
+      </div>
+      <div id="title3">
+        <h3>Department of Artificial Intelligence and Data Science</h3>
+      </div>
+      <button id="start-btn">Enter</button>
+      <div>
+        <ul class="wrapper">
+          <li class="icon facebook">
+            <span class="tooltip">SURYA</span>
+            <img src="assets/surya1.jpg" alt="Facebook Icon" height="30" width="30">
+          </li>
+          <li class="icon twitter">
+            <span class="tooltip">MURALI</span>
+            <img src="assets/murali2.jpg" alt="Facebook Icon" height="30" width="30">
+          </li>
+          <li class="icon instagram">
+            <span class="tooltip">SUBHASH</span>
+            <img src="assets/subhash.jpg" alt="Facebook Icon" height="30" width="30">
+          </li>
+          <li class="icon instagram1">
+            <span class="tooltip">ALLWIN</span>
+            <img src="assets/allwin.jpg" alt="Facebook Icon" height="30" width="30">
+          </li>
+        </ul>
+      </div>
+      <div id="designer">
+        <h5>Designed by</h5>
+      </div>
+    </div>
+
+    <!-- User Login Page -->
+    <div id="user-page" class="page hidden">
+      <h1>Enter Your Details</h1>
+      <input type="text" id="username" placeholder="Name" required aria-label="Enter your username">
+      <input type="text" id="department" placeholder="Department" aria-label="Enter your department (optional)">
+      <input type="text" id="college" placeholder="College Name" aria-label="Enter College name (optional)">
+      <button id="login-btn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Page -->
+    <div id="quiz-page" class="page hidden">
+      <div id="question-container">
+        <p id="question"></p>
+        <div id="options"></div>
+      </div>
+      <button id="next-btn" class="hidden">Next</button>
+    </div>
+
+    <!-- Scoreboard Page -->
+    <div id="scoreboard-page" class="page hidden">
+      <h1>Quiz Completed!</h1>
+      <p><span id="user-score">0</span></p>
+      <div class="button-container">
+        <button onclick="startCountdown(); submitLeaderboard()" id="oggie">Submit Score</button>
+        <!-- <p id="countdown"></p> -->
+      </div>
+      <p id="countdown"></p>
+    </div>
+
+    <!-- Leaderboard Page -->
+    <div id="leaderboard-page" class="page hidden">
+      <h1>Scoreboard</h1>
+      <table id="leaderboard">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Dept</th>
+            <th>Name</th>
+            <th>College</th>
+            <th>Score</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody id="leaderboard-body">
+          <!-- Leaderboard rows will be dynamically inserted here -->
+        </tbody>
+      </table>
+      <div class="button-container">
+        <!-- <button onclick="startCountdown()" id="oggie">Submit Score</button> -->
+    </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
