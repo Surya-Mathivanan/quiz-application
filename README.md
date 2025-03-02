@@ -1,6 +1,10 @@
 # Quiz Application
 This is a web-based Quiz Application designed for the Udhayam Department Event at our college. The application allows users to take a quiz, tracks their scores, and maintains a leaderboard.
 
+## College Posters
+### 1. department poster
+
+
 ## Features
  - User Registration: Enter name, department, and college before starting the quiz.
 
