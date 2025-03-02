@@ -1,5 +1,5 @@
 # Quiz Application
-This is a web-based Quiz Application designed for the Udhayam Department Event at our college. The application allows users to take a quiz, tracks their scores, and maintains a leaderboard.
+This is a web-based Quiz Application designed for the intercollege event Udhayam-2025 Department Event at KIT-Kalaignarkarunanidhi Institute of Technology, Coimbatore. The application allows users to take a quiz, track their scores, and maintain a leaderboard.
 
 ## View Online:
  - Website : https://udhayam25-technicalquiz.netlify.app/
