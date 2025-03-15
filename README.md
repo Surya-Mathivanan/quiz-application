@@ -83,7 +83,7 @@ quiz-application/
 
 ## Contributors
  - Surya M - Developer & Event Organizer
- - Subhash VV - Developer & Question Organizer
+ - [Subhash VV](https://github.com/Subhash2615) - Developer & Question Organizer
 
 ## License
  - This project is for educational purposes only.
