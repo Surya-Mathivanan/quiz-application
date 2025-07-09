@@ -4,6 +4,9 @@ This is a web-based Quiz Application designed for the intercollege event Udhayam
 ## View Online:
  - Website : https://udhayam25-technicalquiz.netlify.app/
 
+## PDF Overview:
+ - [_Quiz Application.pdf](https://github.com/user-attachments/files/21146445/_Quiz.Application.pdf)
+
 ## College Posters
 ### 1. department poster
 ![Image](https://github.com/user-attachments/assets/1bbce667-a473-4a3f-8324-2abc454dfed0)
